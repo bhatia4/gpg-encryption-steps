@@ -88,8 +88,8 @@ gpg --decrypt doc.gpg --encrypt input.txt
 
 More info on GPG at: 
 <ul>
-https://www.gnupg.org/
-https://www.gnupg.org/faq/gnupg-faq.html
-https://www.gnupg.org/gph/en/manual/x110.html
-https://www.gnupg.org/documentation/manpage.html
+<li>https://www.gnupg.org/</li>
+<li>https://www.gnupg.org/faq/gnupg-faq.html</li>
+<li>https://www.gnupg.org/gph/en/manual/x110.html</li>
+<li>https://www.gnupg.org/documentation/manpage.html</li>
 </ul>
