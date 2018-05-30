@@ -15,7 +15,7 @@ Make sure to download gpg tool from https://www.gnupg.org/ and see if you have a
 <br/>Steps:<br/>
 
 <b>Step 1 A</b>: First time only, generate key pair. You will be asked for userID in the form "First Lastname (comment or initials) <email.address>".
-If you are on linux env, then prior to this step you may also want to install rng-tools, which is a set of utilities related to random number generation in kernel. Any private information has been replaced with asterix (*).
+If you are on linux env, then prior to this step you may also want to install rng-tools, which is a set of utilities related to random number generation in kernel (more info on this at: https://www.howtoforge.com/helping-the-random-number-generator-to-gain-enough-entropy-with-rng-tools-debian-lenny). Any private information has been replaced with asterix (*).
 <pre>
   gpg --gen-key
 Please select what kind of key you want:
@@ -87,7 +87,9 @@ Step 3: using gpg to encrypt input.txt and output it as file doc.gpg (; argument
 gpg --decrypt doc.gpg --encrypt input.txt
 
 More info on GPG at: 
+<ul>
 https://www.gnupg.org/
 https://www.gnupg.org/faq/gnupg-faq.html
 https://www.gnupg.org/gph/en/manual/x110.html
 https://www.gnupg.org/documentation/manpage.html
+</ul>
