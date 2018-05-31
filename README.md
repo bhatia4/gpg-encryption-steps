@@ -101,7 +101,7 @@ After this step look for the new file doc.gpg which will be encrypted version of
 6▒▒▒el▒▒▒▒▒$▒&▒▒wȑ▒▒▒6)~▒▒͗▒u▒s<▒▒4v▒ֲ▒▒P▒▒k▒▒e84*O▒Ve▒Hn▒▒▒▒▒▒.▒j▒▒o▒<}▒▒ݝ0%▒'U▒▒▒▒вc\l▒▒GGF▒▒▒▒▒▒▒▒▒▒▒▒
 </pre>
 
-b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file.
+<b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file.
 Remember the passphrase you created above? You will need it to decrypt the file
 <pre>
   gpg --output input_decrypted.txt --decrypt doc.gpg
