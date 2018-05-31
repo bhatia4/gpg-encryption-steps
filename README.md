@@ -88,8 +88,18 @@ sub   4096R/B8864E59 2018-05-30 [expires: 2018-06-13]
 
 <b>Step 2</b>: Have a input file ready for encryption (in our steps its input.txt but it can be an input file, even binary)
 
-Step 3: using gpg to encrypt input.txt and output it as file doc.gpg (; arguments "--encrypt" to encrypt given input file & "--output file" write output to file)
-<pre>  gpg --output doc.gpg --encrypt input.txt </pre>
+<b>Step 3</b>: Use gpg command below to encrypt input.txt and output it as file doc.gpg (arguments "--recipient name"
+ encrypt for user id name, "--encrypt" to encrypt given input file & "--output file" write output to file). You will be prompted for the user ID which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will ask for clarification.
+After thsi step look for the new file doc.gpg which will be encrypted version of your input file
+<pre>
+  gpg --output doc.gpg --recipient Kenny --encrypt input.txt 
+  
+  cat doc.gpg
+▒
+ ▒▒c긆NY▒2R▒B
+▒b▒^0▒▒▒w▒▒▒ӆ▒Vf]7ʴ▒▒%2▒e?▒G▒,▒▒▒g▒▒X▒▒{▒▒M▒)+▒▒8t▒j▒,ϱ▒▒9▒▒▒
+6▒▒▒el▒▒▒▒▒$▒&▒▒wȑ▒▒▒6)~▒▒͗▒u▒s<▒▒4v▒ֲ▒▒P▒▒k▒▒e84*O▒Ve▒Hn▒▒▒▒▒▒.▒j▒▒o▒<}▒▒ݝ0%▒'U▒▒▒▒вc\l▒▒GGF▒▒▒▒▒▒▒▒▒▒▒▒
+</pre>
 
 gpg --decrypt doc.gpg --encrypt input.txt
 
