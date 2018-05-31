@@ -90,7 +90,7 @@ sub   4096R/B8864E59 2018-05-30 [expires: 2018-06-13]
 
 <b>Step 3</b>: Use gpg command below to encrypt input.txt and output it as file doc.gpg (arguments "--recipient name"
  encrypt for user id name, "--encrypt" to encrypt given input file & "--output file" write output to file). You will be prompted for the user ID which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will ask for clarification.
-After thsi step look for the new file doc.gpg which will be encrypted version of your input file
+After this step look for the new file doc.gpg which will be encrypted version of your input file
 <pre>
   gpg --output doc.gpg --recipient Kenny --encrypt input.txt 
   
@@ -101,7 +101,17 @@ After thsi step look for the new file doc.gpg which will be encrypted version of
 6▒▒▒el▒▒▒▒▒$▒&▒▒wȑ▒▒▒6)~▒▒͗▒u▒s<▒▒4v▒ֲ▒▒P▒▒k▒▒e84*O▒Ve▒Hn▒▒▒▒▒▒.▒j▒▒o▒<}▒▒ݝ0%▒'U▒▒▒▒вc\l▒▒GGF▒▒▒▒▒▒▒▒▒▒▒▒
 </pre>
 
-gpg --decrypt doc.gpg --encrypt input.txt
+b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file.
+Remember the passphrase you created above? You will need it to decrypt the file
+<pre>
+  gpg --output input_decrypted.txt --decrypt doc.gpg
+  
+You need a passphrase to unlock the secret key for
+user: "Kenny Rogers (KGB) &lt;kenny.rogers99@gmail.com&gt;"
+4096-bit RSA key, ID ******, created 2018-05-30 (main key ID ******)
+Enter passphrase: ************
+</pre>
+  
 
 More info on GPG at: 
 <ul>
