@@ -76,8 +76,15 @@ uid                  Kenny Rogers (KGB) &lt;kenny.rogers99@gmail.com&gt;
 sub   4096R/******** 2018-05-30 [expires: 2018-06-13]
 </pre>
 
-<b>Step 1 B</b>: List all keys from the public keyrings
-<pre>  gpg --list-keys </pre>
+<b>Step 1 B</b>: List all keys from the public keyrings. You should see your newly created public key using the below command
+<pre>
+  gpg --list-keys 
+pub   4096R/8CF28AFF 2018-05-30 [expires: 2018-06-13]
+uid                  Kenny Rogers (KGB) &lt;kenny.rogers99@gmail.com&gt;
+sub   4096R/B8864E59 2018-05-30 [expires: 2018-06-13]
+  
+  
+</pre>
 
 <b>Step 2</b>: Have a input file ready for encryption (in our steps its input.txt but it can be an input file, even binary)
 
