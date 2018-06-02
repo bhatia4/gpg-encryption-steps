@@ -101,7 +101,7 @@ After this step look for the new file doc.gpg which will be encrypted version of
 6▒▒▒el▒▒▒▒▒$▒&▒▒wȑ▒▒▒6)~▒▒͗▒u▒s<▒▒4v▒ֲ▒▒P▒▒k▒▒e84*O▒Ve▒Hn▒▒▒▒▒▒.▒j▒▒o▒<}▒▒ݝ0%▒'U▒▒▒▒вc\l▒▒GGF▒▒▒▒▒▒▒▒▒▒▒▒
 </pre>
 
-<b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file. We are of course assuming that you have encrypted and decrypted on the same system & GPG instance (as GPG has access to both your private and public keys).
+<b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verify if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file. We are of course assuming that you have encrypted and decrypted on the same system & GPG instance (as GPG has access to both your private and public keys).
 
 Remember the passphrase you created above? You will need it to decrypt the file
 <pre>
@@ -116,7 +116,7 @@ Enter passphrase: ************
 <b>Step 5</b>: Exporting keys. As suggested above, you should export your public keys and its recommended you share it with those who wish to send you encrypted messages. You should NOT share your private key, unless you wish to decrypt your data at maybe another system or GPG location. More on that below as well.
 
 Use below commands to export your public key and review it (arguments "--armor" to create ASCII armored output & "--export [ names ]"
-to export all keys from keyrings (default keyrings and those registered via option --keyring), or if at least one name is given, those of the given name to). When calling export command, provide your user ID, which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will return "gpg: WARNING: nothing exported" error.
+to export all keys from keyrings (default keyrings and those registered via option --keyring), or if at least one name is given, those of the given name to). When calling export command, provide your user ID, which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial, then must uniquely identify the resp. user or gpg will return "gpg: WARNING: nothing exported" error.
 <pre>
   gpg --armor --export "Kenny" > kenny_pubKey.gpg
   cat kenny_pubKey.gpg 
@@ -131,7 +131,7 @@ mQIN************************************************
 
 Next, export your private key to a file (arguments "--armor" to create ASCII armored output & "--export-secret-keys [ names ]" is same as --export, but does export the secret keys).
 
-Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography! More on sharing keys at https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg
+Again, please do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography! More on sharing keys at https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg
 <pre>
   gpg --armor --export-secret-key "Kenny" > kenny_privateKey.gpg
   cat kenny_privateKey.gpg
@@ -150,7 +150,7 @@ More info on GPG at:
 <li>https://www.gnupg.org/faq/gnupg-faq.html</li>
 <li>https://www.gnupg.org/gph/en/manual/x110.html</li>
 <li>GPG Manual, showing examples and detailing all available arguments - https://www.gnupg.org/documentation/manpage.html</li>
-<li>Quick'n easy gpg cheatsheet - http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
+<li>Quick and easy gpg cheat sheet - http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
 <li>Using GPG to encrypt data from stdin - https://lists.gnupg.org/pipermail/gnupg-users/2013-November/048256.html</li>
 <li>Sharing Encryption Keys: A Practical Example With GPG - https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg</li>
 </ul>
