@@ -129,7 +129,9 @@ mQIN************************************************
 -----END PGP PUBLIC KEY BLOCK-----
 </pre>
 
-Next, export your private key to a file. Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography!
+Next, export your private key to a file (arguments "--armor" to create ASCII armored output & "--export-secret-keys [ names ]" is same as --export, but does export the secret keys. This is normally not very useful and a security risk). 
+
+Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography!
 <pre>
   gpg --armor --export-secret-key "Kenny" > kenny_privateKey.gpg
   cat kenny_privateKey.gpg
