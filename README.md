@@ -119,8 +119,7 @@ Use below commands to export your public key and review it (arguments "--armor" 
 to export all keys from keyrings (default keyrings and those registered via option --keyring), or if at least one name is given, those of the given name to). When calling export command, provide your user ID, which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will return "gpg: WARNING: nothing exported" error.
 <pre>
   gpg --armor --export "Kenny" > kenny_pubKey.gpg
-  cat kenny_pubKey.gpg
-  
+  cat kenny_pubKey.gpg 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
@@ -134,11 +133,10 @@ Next, export your private key to a file. Again do not share private keys with an
 <pre>
   gpg --armor --export-secret-key "Kenny" > kenny_privateKey.gpg
   cat kenny_privateKey.gpg
-
 -----BEGIN PGP PRIVATE KEY BLOCK-----
 Version: GnuPG v1
 
-mQIN************************************************
+lSd9***********************************************
 *****************************************************
 ...
 -----END PGP PRIVATE KEY BLOCK-----
