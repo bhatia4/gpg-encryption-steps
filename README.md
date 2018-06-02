@@ -131,7 +131,7 @@ mQIN************************************************
 
 Next, export your private key to a file (arguments "--armor" to create ASCII armored output & "--export-secret-keys [ names ]" is same as --export, but does export the secret keys).
 
-Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography!
+Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography! More on sharing keys at https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg
 <pre>
   gpg --armor --export-secret-key "Kenny" > kenny_privateKey.gpg
   cat kenny_privateKey.gpg
@@ -151,4 +151,6 @@ More info on GPG at:
 <li>https://www.gnupg.org/gph/en/manual/x110.html</li>
 <li>https://www.gnupg.org/documentation/manpage.html</li>
 <li>http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
+<li>https://lists.gnupg.org/pipermail/gnupg-users/2013-November/048256.html</li>
+<li>https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg</li>
 </ul>
