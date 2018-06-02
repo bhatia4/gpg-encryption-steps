@@ -149,8 +149,8 @@ More info on GPG at:
 <li>https://www.gnupg.org/</li>
 <li>https://www.gnupg.org/faq/gnupg-faq.html</li>
 <li>https://www.gnupg.org/gph/en/manual/x110.html</li>
-<li>https://www.gnupg.org/documentation/manpage.html</li>
-<li>http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
-<li>https://lists.gnupg.org/pipermail/gnupg-users/2013-November/048256.html</li>
-<li>https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg</li>
+<li>GPG Manual, showing examples and detailing all available arguments - https://www.gnupg.org/documentation/manpage.html</li>
+<li>Quick'n easy gpg cheatsheet - http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
+<li>Using GPG to encrypt data from stdin - https://lists.gnupg.org/pipermail/gnupg-users/2013-November/048256.html</li>
+<li>Sharing Encryption Keys: A Practical Example With GPG - https://blog.ipswitch.com/sharing-encryption-keys-practical-example-gpg</li>
 </ul>
