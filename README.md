@@ -92,7 +92,7 @@ sub   4096R/B8864E59 2018-05-30 [expires: 2018-06-13]
  encrypt for user id name, "--encrypt" to encrypt given input file & "--output file" write output to file). You will be prompted for the user ID which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will ask for clarification.
 After this step look for the new file doc.gpg which will be encrypted version of your input file
 <pre>
-  gpg --output doc.gpg --recipient Kenny --encrypt input.txt 
+  gpg --output doc.gpg --recipient "Kenny" --encrypt input.txt 
   
   cat doc.gpg
 ▒
@@ -101,7 +101,7 @@ After this step look for the new file doc.gpg which will be encrypted version of
 6▒▒▒el▒▒▒▒▒$▒&▒▒wȑ▒▒▒6)~▒▒͗▒u▒s<▒▒4v▒ֲ▒▒P▒▒k▒▒e84*O▒Ve▒Hn▒▒▒▒▒▒.▒j▒▒o▒<}▒▒ݝ0%▒'U▒▒▒▒вc\l▒▒GGF▒▒▒▒▒▒▒▒▒▒▒▒
 </pre>
 
-<b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file.
+<b>Step 4</b>: As a test, use gpg decrypt command below to return our initial input file and manually verfiy if the contents in it are same as in the original file (arguments "--decrypt" to decrypt given encrypted file & "--output file" write output to file). GPG will pull the keys based on the signed information found on the encrypted file. We are of course assuming that you have encrypted and decrypted on the same system & GPG instance (as GPG has access to both your private and public keys).
 
 Remember the passphrase you created above? You will need it to decrypt the file
 <pre>
@@ -113,11 +113,22 @@ user: "Kenny Rogers (KGB) &lt;kenny.rogers99@gmail.com&gt;"
 Enter passphrase: ************
 </pre>
   
+<b>Step 5</b>: Exporting keys. As suggested above, you should export your public keys and its recommended you share it with those who wish to send you encrypted messages. You should NOT share your private key, unless you wish to decrypt your data at maybe another system or GPG location. More on that below as well.
 
+Use below commands to export your public key and review it (arguments "--armor" to create ASCII armored output & "--export [ names ]"
+to export all keys from keyrings (default keyrings and those registered via option --keyring), or if at least one name is given, those of the given name to). When calling export command, provide your user ID, which you specified in previous steps. User ID can be partial or in the exact form stated above. If partial then must uniquely identify the resp. user or gpg will return "gpg: WARNING: nothing exported" error.
+<pre>
+  gpg --armor --export "Kenny" > kenny_pubKey.gpg
+  cat kenny_pubKey.gpg
+</pre>
+
+  gpg --armor --export-secret-key -a "Kunal Bhatia" > kunal_bhatia_privateKey.gpg
+ 
 More info on GPG at: 
 <ul>
 <li>https://www.gnupg.org/</li>
 <li>https://www.gnupg.org/faq/gnupg-faq.html</li>
 <li>https://www.gnupg.org/gph/en/manual/x110.html</li>
 <li>https://www.gnupg.org/documentation/manpage.html</li>
+<li>http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/</li>
 </ul>
