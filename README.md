@@ -120,10 +120,30 @@ to export all keys from keyrings (default keyrings and those registered via opti
 <pre>
   gpg --armor --export "Kenny" > kenny_pubKey.gpg
   cat kenny_pubKey.gpg
+  
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+mQIN************************************************
+*****************************************************
+...
+-----END PGP PUBLIC KEY BLOCK-----
 </pre>
 
-  gpg --armor --export-secret-key -a "Kunal Bhatia" > kunal_bhatia_privateKey.gpg
- 
+Next, export your private key to a file. Again do not share private keys with anyone else or transmit via email. Sharing your private keys defeats the purpose of asymmetric cryptography!
+<pre>
+  gpg --armor --export-secret-key "Kenny" > kenny_privateKey.gpg
+  cat kenny_privateKey.gpg
+
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+Version: GnuPG v1
+
+mQIN************************************************
+*****************************************************
+...
+-----END PGP PRIVATE KEY BLOCK-----
+</pre>
+
 More info on GPG at: 
 <ul>
 <li>https://www.gnupg.org/</li>
