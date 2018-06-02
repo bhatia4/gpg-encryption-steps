@@ -1,7 +1,7 @@
 # gpg-encryption-steps
 Encryption/Decryption steps using GNU Privacy Guard (GPG)
 
-Purpose of this document was to bring together disparate information (on various diferrent sites, forums and other webpages) on how to encrypt and decrypt files using GNU Privacy Guard (GPG). Hope this helps you.<br/>
+Purpose of this document was to bring together disparate information (on various sites, forums and other webpages) on how to encrypt and decrypt files using GNU Privacy Guard (GPG). Hope this helps you.<br/>
 
 Basic Premise:
 We will encrypt/decrypt using asymmetric cryptography which involves a public key to encrypt and a private key (with passphrase) to decrypt. 
@@ -15,7 +15,7 @@ Make sure to download gpg tool from https://www.gnupg.org/ and see if you have a
 <br/>Steps:<br/>
 
 <b>Step 1 A</b>: First time only, generate key pair. You will be asked for userID in the form "First Lastname (comment or initials) <email.address>".
-If you are on linux env, then prior to this step you may also want to install rng-tools, which is a set of utilities related to random number generation in kernel (more info on this at: https://www.howtoforge.com/helping-the-random-number-generator-to-gain-enough-entropy-with-rng-tools-debian-lenny). Any private information has been replaced with asterix (*).
+If you are on Linux environment, then prior to this step you may also want to install rng-tools, which is a set of utilities related to random number generation in kernel (more info on this at: https://www.howtoforge.com/helping-the-random-number-generator-to-gain-enough-entropy-with-rng-tools-debian-lenny). Any private information has been replaced with asterix (*).
 <pre>
   gpg --gen-key
 Please select what kind of key you want:
